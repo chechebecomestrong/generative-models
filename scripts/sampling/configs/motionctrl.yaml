@@ -19,7 +19,7 @@ model:
     network_config:
       target: sgm.modules.diffusionmodules.video_model.VideoUNet
       params:
-        num_frames: 14
+        # num_frames: 14
         adm_in_channels: 768
         num_classes: sequential
         use_checkpoint: false
