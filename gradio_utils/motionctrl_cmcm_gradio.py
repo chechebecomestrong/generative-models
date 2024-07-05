@@ -49,8 +49,8 @@ def to_relative_RT2(org_pose, keyframe_idx=0, keyframe_zero=False):
 def build_model(config, ckpt, device, num_frames, num_steps):
     num_frames = default(num_frames, 14)
     num_steps = default(num_steps, 25)
-    model_config = default(config, "configs/inference/config_motionctrl_cmcm.yaml")
-
+    print(f"config",config)
+    model_config = config
     print(f"Loading model from {ckpt}")
     model, filter = load_model(
         model_config,
