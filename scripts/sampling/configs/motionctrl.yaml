@@ -45,7 +45,7 @@ model:
         emb_models:
         - is_trainable: false
           input_key: cond_frames_without_noise
-          ucg_rate: 0.1
+          # ucg_rate: 0.1
           target: sgm.modules.encoders.modules.FrozenOpenCLIPImagePredictionEmbedder
           params:
             n_cond_frames: 1
@@ -70,7 +70,7 @@ model:
 
         - input_key: cond_frames
           is_trainable: false
-          ucg_rate: 0.1
+          # ucg_rate: 0.1
           target: sgm.modules.encoders.modules.VideoPredictionEmbedderWithEncoder
           params:
             disable_encoder_autocast: true
@@ -164,6 +164,6 @@ model:
         guider_config:
           target: sgm.modules.diffusionmodules.guiders.LinearPredictionGuider
           params:
-            num_frames: 14
+            # num_frames: 14
             max_scale: 2.5
             min_scale: 1.0
