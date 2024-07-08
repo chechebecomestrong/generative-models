@@ -31,7 +31,7 @@ def forward_VideoUnet(
         emb = self.time_embed(t_emb)
 
         ## tbd: check the role of "image_only_indicator"
-        num_video_frames = 32
+        num_video_frames = 28
         ## 此处取值有问题
         image_only_indicator = torch.zeros(
                     x.shape[0]//num_video_frames, num_video_frames
